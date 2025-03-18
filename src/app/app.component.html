@@ -1,0 +1,10 @@
+<div>
+    <h1>{{ title }}</h1>
+    <p>Current Date (formatted): {{ currentDate | date: 'fullDate' }}</p>
+
+    <p>Child is active: {{ isChildActive }}</p>
+
+    <app-child [parentMessage]="parentMessage" [isChildActive]="isChildActive"
+        (childMessage)="onChildMessageReceived($event)">
+    </app-child>
+</div>
